@@ -1,0 +1,173 @@
+{% extends 'hm/basic.html' %}
+{% load static %}
+{% block css %}
+#bg{width :100%;
+height :20rem;
+}
+
+#pd{
+background-color : #3333ff;
+height:70px;
+margin-bottom :10%;}
+h2{margin-left: 20%;}
+nav {
+
+
+  background-image: url({% static 'hm/images/back.jpeg' %});
+
+  min-height: 380px;
+
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  position: relative;
+}
+#top{
+height:200px;
+width:px}
+.card{
+margin-left :256px;
+}
+#cd {margin-bottom: 200px;}
+          {% endblock %}
+{% block body %}
+{% load static %}
+ <!--<img id ="bg" src="{% static 'hm/images/back.jpeg'%}">-->
+<div id="bg-img">
+
+    <nav class="site-header py-1 ">
+  <div class="container d-flex flex-column flex-md-row justify-content-between" style="margin-top:5%;">
+    <a class="py-2" href="#" aria-label="Product">
+        <img id="top" src="{% static 'hm/images/log.png' %}"  class="d-inline-block align-top" alt="mdb logo">
+     <!-- <svg xmlns="{% static 'home/images/ma.png' %}" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>-->
+   </a>
+    <a class="py-2 d-none d-md-inline-block" href="/">Home</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">About Us</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">Business</a>
+    <a class="py-2 d-none d-md-inline-block" href="/product">Products</a>
+    <a class="py-2 d-none d-md-inline-block" href="/rewards">Rewards</a>
+      <a class="py-2 d-none d-md-inline-block" href="/login">Login</a>
+      <a class="py-2 d-none d-md-inline-block" href="/join">Join</a>
+    <a class="py-2 d-none d-md-inline-block" href="/contact">Contact Us</a>
+
+  </div>
+</nav>
+<div id="pd">
+    <h2>Our Products</h2></div>
+    <div id="cd">
+    <div class="card mb-3" style="max-width: 540px; background-color:#cc0066;">
+  <div class="row no-gutters">
+    <div class="col-md-4" >
+      <img src="{% static 'hm/images/log.png'%}" class="card-img" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+<footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12 footer-colmun">
+                    <div class="footer-wideget logo-wideget contact-widget">
+                        <div class="logo-top">
+                            <div class="footer-logo">
+                            <img id="ctl00_imglogo" src="{% static 'hm/images/log.png'%}" style="width:256px;border-width:0px;">
+                            </div>
+
+                        </div>
+                        <div class="footer-social">
+                            <div class="footer-title"><h5>we are social</h5></div>
+                            <ul class="social-list">
+                                <li><a href="https://twitter.com" id="ctl00_atw"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.facebook.com/" id="ctl00_afb"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://in.pinterest.com/" id="ctl00_agp"><i class="fa fa-google-plus"></i></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-12 footer-colmun">
+                    <div class="footer-wideget service-widget">
+                        <div class="footer-title"><h5>our services</h5></div>
+                        <ul class="list">
+                            <li><a href="/m/legal.aspx" id="ctl00_a1x"><p><span id="ctl00_l1x">Legals</span></p></a></li>
+                            <li style="display:none"><a href="/m/terms.aspx" id="ctl00_a2x"><p><span id="ctl00_l2x">Terms</span></p></a></li>
+                            <li style="display:none"><a href="/m/privacy.aspx" id="ctl00_a3x"><p><span id="ctl00_l3x">Privacy Policy</span></p></a></li>
+                            <li><a href="/m/contact.aspx" id="ctl00_a4x"><p><span id="ctl00_l4x">Contact Us</span></p></a></li>
+                            <li><a href="/m/view_rewach.aspx" id="ctl00_a5x"><p><span id="ctl00_l5x">Reward Achievers</span></p></a></li>
+                            <li><a href="/m/view_topach.aspx" id="ctl00_a6x"><p><span id="ctl00_l6x">Top Achievers</span></p></a></li>
+                            <li><a href="http://onlineeducation.statusviewid.com/home.aspx" id="ctl00_a7x"><p><span id="ctl00_l7x">Online Education</span></p></a></li>
+                            <li><a href="registration.pdf"><p>Register Form</p></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 footer-colmun">
+                    <div class="footer-wideget post-widget">
+                     <div class="footer-title"><h5>Recent Posts</h5></div>
+                      <ul class="list">
+                        <li><a href="/m/viewseminars.aspx" id="ctl00_a8x"><p><span id="ctl00_l8x">Meetings &amp; Seminars</span></p></a></li>
+                        <li><a href="/m/viewnews.aspx" id="ctl00_a9x"><p><span id="ctl00_l9x">Latest News</span></p></a></li>
+                        <li><a href="/m/shopcat.aspx" id="ctl00_a10x"><p></p></a></li>
+                        <li><a href="/m/n_eshopping.aspx" id="ctl00_a11x"><p></p></a></li>
+                        <li><a href="/m/viewvideos.aspx" id="ctl00_a12x"><p><span id="ctl00_l12x">Video Gallery</span></p></a></li>
+                        <li><a href="/m/photogallery.aspx" id="ctl00_a13x"><p><span id="ctl00_l13x">Photo Gallery</span></p></a></li>
+                        <li><a href="/m/classifiedlist.aspx" id="ctl00_a14x"><p><span id="ctl00_l14x">Member Ads</span></p></a></li>
+                          <li><a href="complaint.aspx"><p>Complaint Box</p></a></li>
+                        </ul>
+                   </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 footer-colmun">
+                    <div class="footer-wideget contact-widget">
+                        <div class="footer-title"><h5>Contact us</h5></div>
+                        <div class="single-item">
+                            <div class="icon-box"><i class="fa fa-map-marker"></i></div>
+                            <div class="text"><p><span id="ctl00_lbladr">http://www.Richway.in</span>,
+                            <span id="ctl00_lbladr1"></span>
+                            </p></div>
+                        </div>
+                        <div class="single-item" style="display:none">
+                            <div class="icon-box"><i class="fa fa-phone"></i></div>
+                            <div class="text"><p>Phone:
+                              <a id="ctl00_h1" class="fortext" data-rel="external" href="tel:" target="_blank"></a>
+                            </p></div>
+                        </div>
+                        <div class="single-item">
+                            <div class="icon-box"><i class="fa fa-envelope"></i></div>
+                            <div class="text"><p>Email:<span id="ctl00_lbleid"><a target="_new" href="https://mail.google.com/mail?view=cm&amp;IsBodyHtml=true&amp;tf=0&amp;to=&amp;text=Hello" richwaynew=""> <span style="color:white;"></span> </a></span></p></div>
+                        </div>
+                          <div class="single-item" style="display:none">
+                            <div class="icon-box"><i class="fa fa-phone"></i></div>
+                            <div class="text"><p>Whatapp:
+
+                            <span id="ctl00_lblwhatsapp"><a target="_new" href="https://api.whatsapp.com/send?phone=&amp;text=Hello%20RichwayNew"> <span style="color:white;"></span> </a></span></p></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        © Copyright <strong><span id="ctl00_lblcmpny">RichwayNew</span></strong>. All Rights Reserved
+      </div>
+
+    </div>
+  </footer>
+{% endblock %}

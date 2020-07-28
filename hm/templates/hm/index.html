@@ -1,0 +1,648 @@
+{% extends 'hm/basic.html' %}
+{% load static%}
+
+
+{% block css %}
+@media (min-width: 1200px).container {
+    max-width: 1140px;
+}
+@media only screen and (min-width: 1224px)#about {
+    background-image: url(../img/what_bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background 0.3s,border 0.3s,border-radius 0.3s,box-shadow 0.3s;}
+#bg-img{background : url({% static 'hm/images/gif.jfif' %});
+width :100%;
+height:40rem;}
+#top{width :50px;
+height :50px;}
+   @media (min-width: 1100px).carousel {
+    margin-top: 0%;
+    position: relative;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+#main {
+    overflow: hidden;
+}
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+#facts {
+    background-color: #192028;
+
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: background 0.3s,border 0.3s,border-radius 0.3s,box-shadow 0.3s;
+    padding: 40px 0px 100px 0px;
+}
+#facts.wraptitle {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1;
+    font-family: Montserrat, sans-serif;
+    letter-spacing: 10px;
+    text-align: inherit;
+    color: #9b9b9b;
+    font-size: 24px;
+    padding: 30px 0px 0px 0px;
+}
+#facts .title1 {
+    color: white;
+    font-weight: bolder;
+    font-size: 25px;
+}
+#call-to-action {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url({% static 'hm/images/back.jpeg'%}) fixed center center;
+    background-size: cover;
+    padding: 80px 0;
+}
+call-to-action .cta-text {
+    color: #fff;
+    font-weight: bolder;
+    font-size: 60px;
+    text-align: center;
+}
+.iconbox .elementor-icon-box-icon {
+    margin-bottom: 15px;
+    text-align: center;
+    color: #fab915;
+    padding: 0px;
+}
+.section-title {
+    margin-bottom: 50px;
+}
+#services .box {
+    padding: 50px 20px;
+    margin-bottom: 50px;
+    text-align: center;
+    border: 1px solid #e6e6e6;
+    height: 200px;
+    position: relative;
+    background: #fafafa;
+}
+.box {
+    text-align: center;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+services.title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.box .title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+    margin: 0;
+}
+.btn-get-started {
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    float: left;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 28px;
+    border-radius: 0px;
+    transition: 0.5s;
+    /* margin: 10px; */
+    border: 2px solid #fff;
+    /* color: #fff; */
+    background-color: #fab915;
+    border-color: #fab915;
+}
+#services .description a {
+    margin-top: 25px;
+    margin-left: 23%;
+    text-align: center;
+}
+.text-center {
+    text-align: center!important;
+}
+#services {
+    background: #fff;
+    background-size: cover;
+    padding: 80px 0 60px 0;
+}
+
+element.style {
+    visibility: visible;
+    animation-name: fadeIn;
+}
+body {
+    background: #fff;
+    color: #666666;
+    font-family: "Open Sans", sans-serif;
+}
+img{
+     width :100%;
+vertical-align: middle;
+    border-style: none;
+           height: 32rem;}
+.row {
+
+    display: flex;
+
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+@media (min-width: 768px).col-md-2 {
+    -ms-flex: 0 0 16.666667%;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+}
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+#about .about-container .background {
+    min-height: 300px;
+    margin-bottom: 10px;
+}
+@media (min-width: 992px).col-lg-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+@media (min-width: 992px).order-lg-2 {
+    -ms-flex-order: 2;
+    order: 2;
+}
+
+{% endblock %}
+ {% block body %}
+{% load static %}
+
+
+
+<div id="bg-img">
+
+    <nav class="site-header py-1 " >
+  <div class="container d-flex flex-column flex-md-row justify-content-between" style="margin-top:5%;">
+    <a class="py-2" href="#" aria-label="Product">
+        <img id="top" src="{% static 'hm/images/log.png' %}"  class="d-inline-block align-top" alt="mdb logo" style="width :256px;height:256px;">
+     <!-- <svg xmlns="{% static 'home/images/ma.png' %}" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>-->
+   </a>
+    <a class="py-2 d-none d-md-inline-block" href="/" style="color:white;">Home</a>
+    <a class="py-2 d-none d-md-inline-block" href="#" style="color:white;">About Us</a>
+    <a class="py-2 d-none d-md-inline-block" href="#" style="color:white;">Business</a>
+    <a class="py-2 d-none d-md-inline-block" href="/product" style="color:white;">Products</a>
+    <a class="py-2 d-none d-md-inline-block" href="/rewards" style="color:white;">Rewards</a>
+      <a class="py-2 d-none d-md-inline-block" href="/login" style="color:white;">Login</a>
+      <a class="py-2 d-none d-md-inline-block" href="/join" style="color:white;">Join</a>
+    <a class="py-2 d-none d-md-inline-block" href="/contact" style="color:white;">Contact Us</a>
+
+  </div>
+    </nav>
+    <h4 style="color :white ; margin-left :10%;">   Welcome</h4>
+    <h2 style="color :white ; margin-left :10%;"> <strong>WELCOME TO BLACK DIAMOND</strong></h2>
+</div>
+
+<!--<div id="roundedpopup" class="popimg" style="position:fixed;left:30%;z-index:9999; display:none;">
+            <a class="close" style="z-index:9999;"><img src="{% static 'hm/images/ma.png' %}" width="40px" height="40px" alt="close"></a>
+                <img id="ctl00_ContentPlaceHolder1_imgpopup" class="img1" src="" style="border-width:0px;-webkit-border-radius: 40px;
+                    -moz-border-radius: 40px; border-radius: 40px; border: 10px solid red;">
+                <div id="ctl00_ContentPlaceHolder1_divpopup" style="top: 300px; margin: 0 auto; width: 95%;
+                    background-color: Green">
+                    <span id="ctl00_ContentPlaceHolder1_lblpoptext" class="c3"></span>
+                </div>
+            </div>
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="{% static 'hm/images/b1.jpeg' %}" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{% static 'hm/images/b2.jpeg' %}" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{% static 'hm/images/b3.jpeg' %}" alt="Third slide">
+    </div>
+      <div class="carousel-item">
+      <img class="d-block w-100" src="{% static 'hm/images/b6.jpeg' %}" alt="Third slide">
+    </div>
+      <div class="carousel-item">
+      <img class="d-block w-100" src="{% static 'hm/images/b5.jpeg' %}" alt="Third slide">
+    </div>
+       <div class="carousel-item">
+      <img class="d-block w-100" src="{% static 'hm/images/b7.jpeg' %}" alt="Third slide">
+    </div>
+       <div class="carousel-item">
+      <img class="d-block w-100" src="{% static 'hm/images/b8.jpeg' %}" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>-->
+
+<main id="main">
+
+    <!--==========================
+      About Us Section    ============================-->
+   <!-- #about -->
+<section id="about">
+      <div class="container">
+        <div class="row about-container">
+
+
+
+          <div class="col-lg-6 background order-lg-1 order-2 wow fadeInRight" style="visibility: visible; animation-name: fadeInRight;">
+          <img src="{% static 'hm/images/b4.jpeg'%}" style="width :400px;height:256px; margin-top :100px;"></div>
+          <div class="col-lg-6 content order-lg-2 order-1">
+
+              <h4 > welcome</h4>
+<div class="dividr">&nbsp;</div>
+
+
+
+
+            <p class="wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+         </p><div class="row">
+         <div class="col-md-12">
+        <span id="ctl00_ContentPlaceHolder1_lblwelcome"><p>
+	You are now a part of the opportunity of the millennium. Our Company is an exciting "People Business". A business that has the potential to turn your dreams into reality. As you build your business, you will establish lifelong friendships and develop support systems unparalleled in any other business.</p>
+</span>
+         </div></div>
+
+           <div class="col-md-12">
+            <p><span id="dots"></span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+
+<button onclick="myFunction()" id="myBtn">our mission</button>
+                <div class="col-md-12">
+            <p><span id="dots1"></span><span id="more1">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+
+<button onclick="vFunction()" id="myBtn1">our vision</button>
+                     <div class="col-md-12">
+            <p><span id="dots2"></span><span id="more2">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+
+<button onclick="aimFunction()" id="myBtn2">our aim</button>
+            <p></p>
+			<!--<a href="#about" class="btn-get-started wow fadeInUp" data-wow-delay="0.4s">Get Started</a>-->
+
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section id="facts">
+      <div class="container wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+      <div class="col-lg-6 content order-lg-1 order-2" style="display: inline-block;">
+        <p class="wraptitle wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;"> About Us</p>
+        <h2 class="title1 wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Why we choose us
+
+
+</h2>
+
+<div class="dividr">&nbsp;</div>
+
+
+        <p class="wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;"><strong></strong>
+        <span id="ctl00_ContentPlaceHolder1_lblabout"></span></p><p>
+	The main motto of Our Company is to boost up network business and to provide the financial freedom as well as the time freedom. We believe in the power of the individual, and encourage talents to flourish. As a highly motivated Multinational Enterprise, Our Company has been developing progressive strategies, which unrelentingly create a synergy for the whole Organization.</p>
+
+
+        <p></p>
+			<a href="../site/default.aspx#about" class="btn-get-started wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Read More..</a>
+
+
+        </div>
+
+      </div>
+    </section>
+
+
+     <section id="services">
+      <div class="container wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+        <div class="section-header">
+          <h3 class="section-title">Services</h3>
+
+        </div>
+        <br><br>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+            <div class="box">
+              <div class="icon"><a href="#"><i class=" fa fa-gift"></i></a></div>
+              <h4 class="title"><a href="../m/view_rewach.aspx">View Reward Achievers
+ 	 </a></h4>
+             <p class="description"><a href="../m/view_rewach.aspx" class="btn-get-started wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Click Here</a></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+            <div class="box">
+              <div class="icon"><a href="#"><i class="fa fa-newspaper-o"></i></a></div>
+              <h4 class="title"><a href="../m/viewnews.aspx">View More News</a></h4>
+           <p class="description"><a href="../m/viewnews.aspx" class="btn-get-started wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Click Here</a></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+            <div class="box">
+              <div class="icon"><a href="#"><i class="fa  fa-trophy"></i></a></div>
+              <h4 class="title"><a href="../m/view_topach.aspx">View Top Achievers
+ 	 </a></h4>
+            <p class="description"><a href="../m/view_topach.aspx" class="btn-get-started wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Click Here</a></p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s" style="visibility: hidden; animation-delay: 0.2s; animation-name: none;">
+            <div class="box">
+              <div class="icon"><a href="#"><i class="fa fa-users"></i></a></div>
+              <h4 class="title"><a href="../m/viewseminars.aspx">View Meetings &amp; Seminars</a></h4>
+             <p class="description"><a href="../m/viewseminars.aspx" class="btn-get-started wow fadeInUp" data-wow-delay="0.4s" style="visibility: hidden; animation-delay: 0.4s; animation-name: none;">Click Here</a></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s" style="visibility: hidden; animation-delay: 0.4s; animation-name: none;">
+            <div class="box">
+              <div class="icon"><a href="#"><i class="fa fa-paperclip"></i></a></div>
+              <h4 class="title"><a href="../m/classifiedlist.aspx">View Member Ads</a></h4>
+              <p class="description"><a href="../m/classifiedlist.aspx" class="btn-get-started wow fadeInUp" data-wow-delay="0.4s" style="visibility: hidden; animation-delay: 0.4s; animation-name: none;">Click Here</a></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s" style="visibility: hidden; animation-delay: 0.6s; animation-name: none;">
+            <div class="box">
+              <div class="icon"><a href="#"><i class="fa fa-video-camera"></i></a></div>
+              <h4 class="title"><a href="../m/viewvideos.aspx">View Video Gallery</a></h4>
+              <p class="description"><a href="../m/viewvideos.aspx" class="btn-get-started wow fadeInUp" data-wow-delay="0.4s" style="visibility: hidden; animation-delay: 0.4s; animation-name: none;">Click Here</a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+     <section id="call-to-action">
+      <div class="container wow fadeIn" style="visibility: hidden; animation-name: none;">
+        <div class="row">
+          <div class="col-lg-12 text-center" align="center">
+            <h1 class="cta-text wow fadeInUp" data-wow-delay="0.6s" style="visibility: hidden; animation-delay: 0.6s; animation-name: none;">Simple Steps to Get Started</h1>
+            <div class="dividrr wow fadeInUp" data-wow-delay="0.6s" style="visibility: hidden; animation-delay: 0.6s; animation-name: none;"><div class="dividr">&nbsp;</div></div>
+          </div>
+
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.6s" style="visibility: hidden; animation-delay: 0.6s; animation-name: none;">
+          <div class="iconbox">
+          <a href="business.aspx">
+          	<div class="elementor-icon-box-icon">
+					<i class="fa fa-briefcase"></i>
+
+			</div>
+            <div class="elementor-icon-box-content">
+				<h3>
+					<strong>Business Plan</strong>
+				</h3>
+				</div>
+                </a>
+            </div>
+          </div>
+        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.6s" style="visibility: hidden; animation-delay: 0.6s; animation-name: none;">
+          <div class="iconbox">
+          <a href="../m/join.aspx">
+          	<div class="elementor-icon-box-icon">
+					<i class="fa fa-user-plus"></i>
+
+			</div>
+            <div class="elementor-icon-box-content">
+				<h3>
+					<strong>Join Now</strong>
+				</h3>
+				</div>
+                </a>
+            </div>
+          </div>
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.6s" style="visibility: hidden; animation-delay: 0.6s; animation-name: none;">
+          <div class="iconbox">
+          <a href="../m/login.aspx">
+          	<div class="elementor-icon-box-icon">
+					<i class="fa fa-unlock-alt"></i>
+
+			</div>
+            <div class="elementor-icon-box-content">
+				<h3>
+					<strong>Login Now</strong>
+				</h3>
+				</div>
+                </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+      <section id="portfolio" style="display:none">
+      <div class="container wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+        <div class="section-header">
+          <h3 class="section-title">Latest Updates</h3>
+
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 wow fadeInUp animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+            <div class="box">
+              <div class="icon"><a href="#"><i class="fa fa-newspaper-o"></i></a></div>
+              <h4 class="title"><a href="#">Latest News</a></h4>
+              <p class="description"><iframe style="background-color:#eee;" src="../m/ach1.aspx?bc=e8eaef" frameborder="0" width="100%" height="295px" scrolling="no"> </iframe></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+            <div class="box">
+              <div class="icon"><a href="#"><i class="fa fa-trophy"></i></a></div>
+              <h4 class="title"><a href="#">Reward Achiever</a></h4>
+              <p class="description"><iframe style="background-color:#eee;" src="../m/ach.aspx?bc=e8eaef" frameborder="0" width="100%" height="295px" scrolling="no"> </iframe></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp animated" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+            <div class="box">
+              <div class="icon"><a href="#"><i class="fa fa-child"></i></a></div>
+              <h4 class="title"><a href="#">Top Achiever</a></h4>
+              <p class="description"><iframe style="background-color:#eee;" src="../m/ach2.aspx?bc=e8eaef" frameborder="0" width="100%" height="295px" scrolling="no"> </iframe></p>
+            </div>
+          </div>
+
+
+
+
+        </div>
+
+
+
+      </div>
+    </section>
+
+
+
+    <br>
+
+</main>
+<footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12 footer-colmun">
+                    <div class="footer-wideget logo-wideget contact-widget">
+                        <div class="logo-top">
+                            <div class="footer-logo">
+                            <img id="ctl00_imglogo" src="{% static 'hm/images/log.png'%}" style="width:256px;border-width:0px; height:256px;">
+                            </div>
+
+                        </div>
+                        <div class="footer-social">
+                            <div class="footer-title"><h5>we are social</h5></div>
+                            <ul class="social-list">
+                                <li><a href="https://twitter.com" id="ctl00_atw"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.facebook.com/" id="ctl00_afb"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://in.pinterest.com/" id="ctl00_agp"><i class="fa fa-google-plus"></i></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-12 footer-colmun">
+                    <div class="footer-wideget service-widget">
+                        <div class="footer-title"><h5>our services</h5></div>
+                        <ul class="list">
+                            <li><a href="/m/legal.aspx" id="ctl00_a1x"><p><span id="ctl00_l1x">Legals</span></p></a></li>
+                            <li style="display:none"><a href="/m/terms.aspx" id="ctl00_a2x"><p><span id="ctl00_l2x">Terms</span></p></a></li>
+                            <li style="display:none"><a href="/m/privacy.aspx" id="ctl00_a3x"><p><span id="ctl00_l3x">Privacy Policy</span></p></a></li>
+                            <li><a href="/m/contact.aspx" id="ctl00_a4x"><p><span id="ctl00_l4x">Contact Us</span></p></a></li>
+                            <li><a href="/m/view_rewach.aspx" id="ctl00_a5x"><p><span id="ctl00_l5x">Reward Achievers</span></p></a></li>
+                            <li><a href="/m/view_topach.aspx" id="ctl00_a6x"><p><span id="ctl00_l6x">Top Achievers</span></p></a></li>
+                            <li><a href="http://onlineeducation.statusviewid.com/home.aspx" id="ctl00_a7x"><p><span id="ctl00_l7x">Online Education</span></p></a></li>
+                            <li><a href="registration.pdf"><p>Register Form</p></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 footer-colmun">
+                    <div class="footer-wideget post-widget">
+                     <div class="footer-title"><h5>Recent Posts</h5></div>
+                      <ul class="list">
+                        <li><a href="/m/viewseminars.aspx" id="ctl00_a8x"><p><span id="ctl00_l8x">Meetings &amp; Seminars</span></p></a></li>
+                        <li><a href="/m/viewnews.aspx" id="ctl00_a9x"><p><span id="ctl00_l9x">Latest News</span></p></a></li>
+                        <li><a href="/m/shopcat.aspx" id="ctl00_a10x"><p></p></a></li>
+                        <li><a href="/m/n_eshopping.aspx" id="ctl00_a11x"><p></p></a></li>
+                        <li><a href="/m/viewvideos.aspx" id="ctl00_a12x"><p><span id="ctl00_l12x">Video Gallery</span></p></a></li>
+                        <li><a href="/m/photogallery.aspx" id="ctl00_a13x"><p><span id="ctl00_l13x">Photo Gallery</span></p></a></li>
+                        <li><a href="/m/classifiedlist.aspx" id="ctl00_a14x"><p><span id="ctl00_l14x">Member Ads</span></p></a></li>
+                          <li><a href="complaint.aspx"><p>Complaint Box</p></a></li>
+                        </ul>
+                   </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 footer-colmun">
+                    <div class="footer-wideget contact-widget">
+                        <div class="footer-title"><h5>Contact us</h5></div>
+                        <div class="single-item">
+                            <div class="icon-box"><i class="fa fa-map-marker"></i></div>
+                            <div class="text"><p><span id="ctl00_lbladr">http://www.Richway.in</span>,
+                            <span id="ctl00_lbladr1"></span>
+                            </p></div>
+                        </div>
+                        <div class="single-item" style="display:none">
+                            <div class="icon-box"><i class="fa fa-phone"></i></div>
+                            <div class="text"><p>Phone:
+                              <a id="ctl00_h1" class="fortext" data-rel="external" href="tel:" target="_blank"></a>
+                            </p></div>
+                        </div>
+                        <div class="single-item">
+                            <div class="icon-box"><i class="fa fa-envelope"></i></div>
+                            <div class="text"><p>Email:<span id="ctl00_lbleid"><a target="_new" href="https://mail.google.com/mail?view=cm&amp;IsBodyHtml=true&amp;tf=0&amp;to=&amp;text=Hello" richwaynew=""> <span style="color:white;"></span> </a></span></p></div>
+                        </div>
+                          <div class="single-item" style="display:none">
+                            <div class="icon-box"><i class="fa fa-phone"></i></div>
+                            <div class="text"><p>Whatapp:
+
+                            <span id="ctl00_lblwhatsapp"><a target="_new" href="https://api.whatsapp.com/send?phone=&amp;text=Hello%20RichwayNew"> <span style="color:white;"></span> </a></span></p></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        © Copyright <strong><span id="ctl00_lblcmpny">RichwayNew</span></strong>. All Rights Reserved
+      </div>
+
+    </div>
+  </footer>
+{% endblock %}
+{% block js %}
+<script>
+    function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "our mission";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "our mission";
+    moreText.style.display = "inline";
+  }
+}
+function vFunction() {
+  var dots = document.getElementById("dots1");
+  var moreText = document.getElementById("more1");
+  var btnText = document.getElementById("myBtn1");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "our vision";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "our vision";
+    moreText.style.display = "inline";
+  }
+}
+function aimFunction() {
+  var dots = document.getElementById("dots2");
+  var moreText = document.getElementById("more2");
+  var btnText = document.getElementById("myBtn2");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "our aim";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "our aim";
+    moreText.style.display = "inline";
+  }
+}
+</script>
+
+
+{% endblock %}
